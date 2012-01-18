@@ -1,5 +1,6 @@
 Github to WordPress Plugin Directory Deployment Script
 ======================================================
+*Deploys a WordPress plugin from Github (git) to the WordPress Plugin Repostiory (svn)*
 
 Features
 --------
