@@ -9,7 +9,7 @@ Features
 * Verifies plugin header version number matches readme stable version number
 * Commits local version to github and tags
 * Copies git export to svn trunk
-* Removes git specific files (.gitignore, readme.md) from turnk
+* Removes git specific files (.gitignore, readme.md) from trunk
 * Commits to svn trunk, and creates new svn tag
 
 Use
