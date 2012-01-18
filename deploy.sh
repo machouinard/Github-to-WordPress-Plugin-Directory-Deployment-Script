@@ -1,29 +1,6 @@
 #! /bin/bash
 #
 # Script to deploy from Github to WordPress.org Plugin Repository
-# Benjamin J. Balter -- ben@balter.com -- http://ben.balter.com
-#
-# Place in parent directory (e.g. wp-content/plugins/) and run as ./deploy.sh
-#
-# Will prompt for plugin slug and commit message prior to comparing plugin header version to readme stable version, 
-# committing to github and tagging, removing git specific files (.gitignore, readme.md), 
-# committing to svn trunk, and finally tagging within svn
-#
-# History:
-#
-# Adapted from https://github.com/thenbrent/multisite-user-management/blob/master/deploy.sh
-# 
-# thenbrent's version was a modification of Dean Clatworthy's deploy script found at
-# https://github.com/deanc/wordpress-plugin-git-svn
-#
-# Changes:
-# * Don't require existing SVN (thenbrent)
-# * Move from plugin repo to parent
-# * Prompt for plugin slug
-# * SVN 1.6 compatibility (svn propset before exporitng from git)
-# * Capitalized the "P" in WordPress
-#
-# ----------------------------------------
 
 #prompt for plugin slug
 echo -e "Plugin Slug: \c"
