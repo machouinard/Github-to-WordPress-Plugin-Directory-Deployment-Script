@@ -1,13 +1,15 @@
 #! /bin/bash
+#
+# Script to deploy from Github to WordPress.org Plugin Repository
 # A modification of Dean Clatworthy's deploy script as found here: https://github.com/deanc/wordpress-plugin-git-svn
 # The difference is that this script lives in the plugin's git repo & doesn't require an existing SVN repo.
 # Source: https://github.com/thenbrent/multisite-user-management/blob/master/deploy.sh
 
-#prompt for plugin
+#prompt for plugin slug
 echo -e "Plugin Slug: \c"
 read PLUGINSLUG
 
-# main config
+# main config, set off of plugin slug
 CURRENTDIR=`pwd`
 CURRENTDIR="$CURRENTDIR/$PLUGINSLUG"
 MAINFILE="$PLUGINSLUG.php" # this should be the name of your main php file in the wordpress plugin
@@ -17,13 +19,13 @@ GITPATH="$CURRENTDIR/" # this file should be in the base of your git repository
 
 # svn config
 SVNPATH="/tmp/$PLUGINSLUG" # path to a temp SVN repo. No trailing slash required and don't add trunk.
-SVNURL="http://plugins.svn.wordpress.org/$PLUGINSLUG/" # Remote SVN repo on wordpress.org, with no trailing slash
+SVNURL="http://plugins.svn.wordpress.org/$PLUGINSLUG/" # Remote SVN repo on WordPress.org, with no trailing slash
 SVNUSER="benbalter" # your svn username
 
 # Let's begin...
 echo ".........................................."
 echo 
-echo "Preparing to deploy wordpress plugin"
+echo "Preparing to deploy WordPress plugin"
 echo 
 echo ".........................................."
 echo 
