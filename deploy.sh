@@ -69,7 +69,7 @@ git checkout-index -a -f --prefix=$SVNPATH/trunk/
 #if submodule exist, recursively check out their indexes
 if [ -f ".gitmodules" ]
 then
-echo "Exporting the HEAD of each submoduel from git to the trunk of SVN"
+echo "Exporting the HEAD of each submodule from git to the trunk of SVN"
 git submodule init
 git submodule update
 git submodule foreach --recursive 'git checkout-index -a -f --prefix=$SVNPATH/trunk/$path/'
